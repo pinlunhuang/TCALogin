@@ -1,17 +1,16 @@
-//
-//  TCALoginApp.swift
-//  TCALogin
-//
-//  Created by Pinlun Huang on 2025/3/15.
-//
-
+import ComposableArchitecture
 import SwiftUI
 
 @main
 struct TCALoginApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(
+                store: Store(
+                    initialState: LandingFeature.State(),
+                    reducer: { LandingFeature() }
+                )
+            )
         }
     }
 }

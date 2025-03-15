@@ -1,24 +1,20 @@
-//
-//  ContentView.swift
-//  TCALogin
-//
-//  Created by Pinlun Huang on 2025/3/15.
-//
-
+import ComposableArchitecture
 import SwiftUI
 
 struct ContentView: View {
+    let store: StoreOf<LandingFeature>
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        LandingView(store: store)
+            .preferredColorScheme(.dark)
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(
+        store: Store(
+            initialState: LandingFeature.State(),
+            reducer: { LandingFeature() }
+        )
+    )
 }

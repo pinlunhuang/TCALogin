@@ -20,7 +20,7 @@ struct OnboardingView: View {
                 }
 
                 VStack(spacing: 30) {
-                    Image("investment_icon") // Add your flower-like icon asset
+                    Image("investment_icon")
                         .resizable()
                         .frame(width: 100, height: 100)
 

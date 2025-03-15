@@ -10,12 +10,12 @@ struct LoginView: View {
                 Image("draco_logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: 60) // Adjust size as needed
+                    .frame(height: 60)
 
                 Image("draco_name")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: 20) // Adjust size as needed
+                    .frame(height: 20)
 
                 HStack(spacing: 8) {
                     Button(action: {
